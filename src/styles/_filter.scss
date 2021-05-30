@@ -1,0 +1,194 @@
+.title {
+  text-align: center;
+  margin: $freeSpace*4 0;
+}
+
+.filter {
+  background-color: #F4F4F4;
+  padding: $freeSpace $freeSpace;
+  margin-top: $freeSpace*3;
+  border-radius: $borderRadiusBASE;
+  position: sticky;
+  top: 20px;
+  & > div {
+    margin: $freeSpace*4 0;
+  }
+}
+
+.sort-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  overflow: hidden;
+  margin-bottom: $freeSpace*2;
+
+}
+
+.sort-btn {
+  white-space: nowrap;
+  font-size: 12px;
+  background-color: $txtSecondaryColor;
+  border: none;
+  border-radius: $borderRadiusBASE;
+  box-shadow: none;
+
+  &:hover {
+    background-color: $txtSecondaryColor;
+    box-shadow: none;
+  }
+
+  &:active, &.active {
+    background-color: $secondaryColor !important;
+  }
+
+  &:focus, &.focus {
+    background-color: $secondaryColor;
+    box-shadow: none;
+  }
+
+
+  .sort-icon {
+   width: 15px;
+    height: 15px;
+    vertical-align: top;
+    margin-top: 2px ;
+    margin-right: 2px;
+  }
+}
+
+.sort-btn span {
+  max-width: 0;
+  -webkit-transition: max-width 1s;
+  transition: max-width 1s;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sort-btn:hover span {
+  max-width: 12rem;
+}
+
+.custom-control-label {
+  cursor: pointer;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: $txtSecondaryColor;
+  box-shadow: none;
+}
+
+.custom-control-label::before {
+  border: none;
+  box-shadow: none;
+}
+
+.custom-control-label::after {
+  border: none;
+  box-shadow: none;
+}
+
+.filter-section {
+  padding: 0 $freeSpace*3;
+  .filter-switch {
+    font-size: 14px;
+    cursor: pointer ;
+  }
+}
+
+.price-section {
+  font-size: 12px;
+  padding: 0 $freeSpace*3;
+
+  .price-inputs {
+    font-size: 12px;
+  }
+  .label {
+    font-size: 12px;
+    background-color: $txtSecondaryColor;
+    color: $whiteColor;
+  }
+}
+
+.set-default-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .set-default-btn {
+    background-color: $txtSecondaryColor;
+    color: $whiteColor;
+    border-radius: $borderRadiusBASE;
+    margin-top: $freeSpace*2;
+    border: none;
+    padding: $freeSpace $freeSpace*6;
+
+    &:hover {
+      background-color: $txtSecondaryColor;
+      box-shadow: none;
+    }
+
+    &:active, &.active {
+      background-color: $secondaryColor !important;
+    }
+
+    &:focus, &.focus {
+      background-color: $secondaryColor;
+      box-shadow: none;
+    }
+  }
+}
+
+// Variables to control the truncation behaviour
+$startFixedChars     : 3;    // Number of chars before ellipsis - have priority over end chars
+$endFixedChars       : 18;    // Number of chars after ellipsis  - lower priority than start chars
+$fontFaceScaleFactor : 0.46; // Magic number dependent on font face - set by trial and error
+
+// Dervied from the 3 variables above
+$startWidth : 1em * $fontFaceScaleFactor * ($startFixedChars + 3);
+$endWidth   : 1em * $fontFaceScaleFactor * $endFixedChars;
+
+
+.form-check-label {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+}
+
+.firstPart, .lastPart {
+  display: inline-block;
+  vertical-align: bottom;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.firstPart {
+  max-width: calc(100% - #{$endWidth});
+  min-width: $startWidth;
+  text-overflow: ellipsis;
+  color: $txtSecondaryColor;
+}
+.lastPart {
+  max-width: calc(100% - #{$startWidth});
+  direction: rtl;
+}
+
+.scroll-btn {
+  position: absolute;
+  z-index: 9999;
+  right: 43%;
+  bottom: -30%;
+  background-color: $txtSecondaryColor;
+  border: none;
+  border-radius: $borderRadiusBASE;
+  padding-top: $freeSpace;
+
+  &:hover {
+    background-color: $secondaryColor;
+  }
+  .icon {
+    height: 20px;
+    width: 20px;
+  }
+}
+

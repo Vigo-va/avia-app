@@ -1,0 +1,283 @@
+.flight-card {
+  margin: 15px 0;
+  border: 1px solid $borderColor;
+  border-radius: $borderRadiusBASE;
+  padding: $freeSpace;
+  background-color: $mainColor;
+  color: $greyColor;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: $freeSpace $freeSpace*4;
+    .logo {
+
+    }
+
+    .carrier {
+
+    }
+
+    .services-statuses {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+
+
+      .services-statuses-info-baggage {
+        position: absolute;
+        background-color: $txtSecondaryColor;
+        color: $whiteColor;
+        border: 1px solid $borderColor;
+        border-radius: $borderRadiusBASE;
+        padding: $freeSpace $freeSpace*3;
+        left: 68.2%;
+        top: -7%;
+
+        &.off {
+          background-color: $whiteColor;
+          color: $errorColor;
+          border: 1px solid $txtSecondaryColor;
+        }
+        &.paid {
+          background-color: $whiteColor;
+          color: #606060;
+          border: 1px solid $txtSecondaryColor;
+        }
+
+        &.hidden {
+          display: none;
+        }
+
+        &:after {
+          content:'';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -22%;
+          width: 0;
+          height: 0;
+          border-top: solid 5px $txtSecondaryColor;
+          border-left: solid 5px transparent;
+          border-right: solid 5px transparent;
+        }
+      }
+
+      .services-statuses-info-exchange {
+        position: absolute;
+        background-color: $txtSecondaryColor;
+        color: $whiteColor;
+        border: 1px solid $borderColor;
+        border-radius: $borderRadiusBASE;
+        padding: $freeSpace $freeSpace*3;
+        left: 71.8%;
+        top: -7%;
+
+        &.off {
+          background-color: $whiteColor;
+          color: $errorColor;
+          border: 1px solid $txtSecondaryColor;
+        }
+
+        &.paid {
+          background-color: $whiteColor;
+          color: #606060;
+          border: 1px solid $txtSecondaryColor;
+        }
+
+        &.hidden {
+          display: none;
+        }
+
+        &:after {
+          content:'';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -17%;
+          width: 0;
+          height: 0;
+          border-top: solid 5px $txtSecondaryColor;
+          border-left: solid 5px transparent;
+          border-right: solid 5px transparent;
+        }
+      }
+
+      .services-statuses-info-refund {
+        position: absolute;
+        background-color: $txtSecondaryColor;
+        color: $whiteColor;
+        border: 1px solid $borderColor;
+        border-radius: $borderRadiusBASE;
+        padding: $freeSpace $freeSpace*3;
+        left: 74.5%;
+        top: -7%;
+
+        &.off {
+          background-color: $whiteColor;
+          color: $errorColor;
+          border: 1px solid $txtSecondaryColor;
+        }
+
+        &.paid {
+          background-color: $whiteColor;
+          color: #606060;
+          border: 1px solid $txtSecondaryColor;
+        }
+
+        &.hidden {
+          display: none;
+        }
+
+        &:after {
+          content:'';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -10%;
+          width: 0;
+          height: 0;
+          border-top: solid 5px $txtSecondaryColor;
+          border-left: solid 5px transparent;
+          border-right: solid 5px transparent;
+        }
+      }
+
+
+      .price {
+        background-color: $whiteColor;
+        color: $blackColor;
+        font-weight: 600;
+        font-size: 16px;
+        border-radius: $borderRadiusBASE;
+        padding: $freeSpace $freeSpace*3;
+        width: 120px;
+        text-align: center;
+
+        .price-uid {
+          color: $txtSecondaryColor;
+        }
+      }
+
+      .icons {
+        height: 30px;
+        width: 30px;
+        padding: $freeSpace;
+        margin-right: $freeSpace;
+      }
+    }
+  }
+  .legs {
+    margin: $freeSpace;
+    .segments {
+      background-color: $bgColor;
+      border-radius: $borderRadiusBASE;
+      color: $blackColor;
+      padding: $freeSpace $freeSpace*3;
+      display: block;
+      width: 100%;
+      margin: $freeSpace $freeSpace*3;
+
+      .flight-roadmap {
+        border-bottom: 1px inset $borderColor ;
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        padding: $freeSpace;
+
+        .departure-city, .arrival-city, .flight-icons {
+          width: 33.3%;
+          text-align: center;
+          justify-content: center;
+        }
+
+        .airport-uid {
+          color: $txtSecondaryColor;
+        }
+
+        .transfer {
+          position: absolute;
+          font-size: 10px;
+          color: $txtSecondaryColor;
+          left: 46.5%;
+        }
+        .divider {
+          width: 120px;
+          height: 13px;
+          border-bottom: 1px solid $txtSecondaryColor;
+          margin: 0 $freeSpace*2;
+        }
+
+        .icons {
+          height: 15px;
+          width: 15px;
+        }
+
+        .flight-icons {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .flight-info {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px inset $borderColor;
+
+        .flight-duration {
+          display: flex;
+          text-align: center;
+          align-items: center;
+
+          .title {
+            color: $blackColor;
+            font-weight: 600;
+          }
+          .time {
+            color: $txtSecondaryColor;
+            font-size: 30px;
+            font-weight: 600;
+          }
+        }
+        .flight-departure-info, .flight-arrival-info {
+          display: block;
+          text-align: center;
+          .departure-time, .arrival-time {
+            font-size: 30px;
+            font-weight: 600;
+            color: $txtSecondaryColor;
+          }
+          .departure-date, .arrival-date {
+            font-weight: 600;
+            color: $blackColor;
+          }
+
+        }
+      }
+      .footer {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    .choose-btn {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      .legs-btn {
+        padding: $freeSpace $freeSpace*6;
+        font-weight: 400;
+        margin-top: $freeSpace*2;
+        margin-right: $freeSpace*3;
+        background-color: $txtSecondaryColor;
+        border-radius: $borderRadiusBASE;
+        border-color: $borderColor;
+      }
+    }
+
+  }
+}

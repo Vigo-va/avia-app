@@ -1,0 +1,39 @@
+.not-found {
+  width: 100%;
+  margin-top: 25%;
+  text-align: center;
+  color: gray;
+  font-size:  20px;
+
+  .not-found-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: $freeSpace*3;
+  }
+}
+
+.show-more-section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  .show-more-btn {
+    color: $whiteColor;
+    background-color: $txtSecondaryColor;
+    padding: $freeSpace $freeSpace*6;
+    margin: $freeSpace*2;
+    border-radius: $borderRadiusBASE;
+    border: none;
+
+    &:hover {
+      background-color: $txtSecondaryColor;
+      border: none;
+    }
+    &:active, &:focus, &:target {
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+
+
